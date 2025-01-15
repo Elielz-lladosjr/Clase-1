@@ -1,0 +1,17 @@
+* {
+    color: rgb(63, 61, 61);
+}
+h1 {
+    color: darkblue;
+    font-style: italic;
+    text-align: center;
+}
+
+.borde_redondo{
+    border: solid 02px gray;
+    border-radius: 15px;        
+}
+#pie {
+    background-color: darkred;
+    color: #ffff;
+}
