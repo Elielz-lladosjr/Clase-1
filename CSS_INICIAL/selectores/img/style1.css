@@ -1,117 +1,54 @@
-/* Estilos generales para la página */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+.dropdownmenu ul, .dropdownmenu li {
+	margin: 0;
+	padding: 0;
 }
-
-/* Encabezado estilizado con vh para la altura */
-header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    height: 16vh; /* 15% de la altura del viewport */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.dropdownmenu ul {
+	background: gray;
+	list-style: none;
+	width: 100%;
 }
-
-header ul {
-    list-style: none;
-    width: 80%;
-    margin: 0 auto;
-    li {
-        display: inline-block;
-    }
+.dropdownmenu li {
+	float: left;
+	position: relative;
+	width:auto;
 }
-header li a {
-    text-decoration: none;
-    margin: 0 10px;
-    color: white;
-    font-weight: 800;
+.dropdownmenu a {
+	background: #30A6E6;
+	color: #FFFFFF;
+	display: block;
+	font: bold 12px/20px sans-serif;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
 }
-li a:hover {
-    color: rgb(255, 255, 255);
-    font-weight: 800;
+.dropdownmenu li:hover a {
+	background: #000000;
 }
-main {
-    background-color: #ffffff;
-    padding: 5vw; /* 5% del ancho del viewport */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: auto;
-    text-align: center;
+#submenu {
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 35px;
+	visibility: hidden;
+	z-index: 1;
 }
-
-/* Artículos dentro de la sección principal */
-article {
-    background-color: #e0e0e0;
-    width: 50vw; /* 50% del ancho del viewport */
-    padding: 2vh; /* 2% de la altura del viewport */
-    margin: 2vh auto; /* Margen vertical usando vh y centrado horizontal */
-    border-radius: 8px;
-    text-align: center;
-    position: relative;
+li:hover ul#submenu {
+	opacity: 1;
+	top: 40px;	/* adjust this as per top nav padding top & bottom comes */
+	visibility: visible;
 }
-
-article img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 1vh;
+#submenu li {
+	float: none;
+	width: 100%;
 }
-
-article:hover {
-    background-color: #d6d6d6;
-    transform: scale(1.02);
-    transition: all 0.3s ease;
+#submenu a:hover {
+	background: #DF4B05;
 }
-
-/* Selectores anidados para énfasis */
-article > h2 {
-    font-size: 2vh;
-    color: #333;
-    margin: 0;
-}
-
-article > p {
-    font-size: 1.8vh;
-    color: #666;
-}
-
-/* Pie de página estilizado con vh y vw */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    height: 10vh; /* 10% de la altura del viewport */
-    line-height: 10vh; /* Centrado vertical del texto */
-}
-
-footer a {
-    color: #4CAF50;
-    text-decoration: none;
-    margin: 0 1vw;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Diseño responsivo para pantallas más pequeñas */
-@media (max-width: 768px) {
-    main {
-        padding: 10vw;
-    }
-
-    article {
-        width: 80vw; /* Ajuste al 80% del ancho del viewport */
-    }
-
-    article > h2 {
-        font-size: 2.5vh;
-    }
-
-    article > p {
-        font-size: 2vh;
-    }
+#submenu a {
+	background-color:#000000;
 }
