@@ -1,0 +1,59 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+  } 
+   
+  body { 
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; 
+    color: #333; 
+    background-color: #f4f4f9; 
+  } 
+   
+  /* Menú principal */ 
+  .menu { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Define aquí las propiedades de flexbox necesarias */ 
+  } 
+   
+  .logo { 
+    font-size: 24px; /* Tamaño inicial del logo */
+    font-weight: bold; /* Texto en negrita */
+    color: #333; /* Color inicial del logo */
+    transition: all 0.3s ease; /* Transición suave */  } 
+   
+  .menu-items { 
+    display: flex;
+    gap: 20px;
+    list-style: none;/* Añade aquí las propiedades necesarias para los enlaces */ 
+  } 
+   
+  .menu-items li { 
+    align-self: flex-start;
+    /* Estilo inicial de los elementos de la lista */ 
+  } 
+   
+  .menu-items a { 
+    /* Estilo inicial de los enlaces */ 
+    padding: 10px 15px;
+    background-color: #007BFF;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;/* Solo se deja la transición como base */ 
+  } 
+  .logo:hover {
+    transform: scale(1.1); /* Aumenta el tamaño en un 10% */
+    color: #007BFF; /* Cambia el color al hacer hover */
+  }
+  header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
